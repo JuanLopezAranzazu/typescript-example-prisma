@@ -131,6 +131,8 @@ app.get("/", (_req: Request, res: Response) => {
 // routes
 import { router as userRouter } from "./routes/user";
 app.use("/users", userRouter);
+import { router as usersRolesRouter } from "./routes/userRoles";
+app.use("/users-roles", usersRolesRouter);
 
 import { logErrors, errorHandler } from "./middlewares/handleErrors";
 app.use(logErrors);
